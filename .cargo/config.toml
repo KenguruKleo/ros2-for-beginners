@@ -1,0 +1,2 @@
+[patch.crates-io.my_rust_pkg]
+path = "/mnt/hgfs/workspace/ros2_ws/install/my_rust_pkg/share/my_rust_pkg/rust"
