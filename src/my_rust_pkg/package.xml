@@ -10,6 +10,7 @@
   <buildtool_depend>ament_cargo</buildtool_depend>
 
   <depend>rclrs</depend>
+  <depend>example_interfaces</depend>
 
   <export>
     <build_type>ament_cargo</build_type>
