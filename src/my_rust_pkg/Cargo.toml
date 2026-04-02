@@ -12,6 +12,10 @@ path = "src/main.rs"
 name = "rust_news_station"
 path = "src/rust_news_station.rs"
 
+[[bin]]
+name = "rust_news_subscriber"
+path = "src/rust_news_subscriber.rs"
+
 [dependencies]
 anyhow = {version = "1", features = ["backtrace"]}
 rclrs = "0.7"

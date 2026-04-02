@@ -32,3 +32,4 @@ COLCON_IGNORE
 target/
 Cargo.lock
 .cargo
+.cargo/config.toml

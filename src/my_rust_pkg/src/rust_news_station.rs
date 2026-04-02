@@ -7,6 +7,7 @@ fn main() -> Result<()> {
     let context = Context::default_from_env()?;
     let executor = context.create_basic_executor();
     let node = executor.create_node("rust_news_station")?;
+    println!("Created rust_news_station node!");
 
     let publisher = node.create_publisher::<String>("robot_news")?;
 
