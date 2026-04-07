@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(example_interfaces REQUIRED)
+find_package(my_robot_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 
 add_executable(cpp_node src/my_first_node.cpp)
@@ -19,10 +20,14 @@ ament_target_dependencies(add_two_ints_client example_interfaces rclcpp)
 add_executable(add_two_ints_serv src/add_two_ints_serv.cpp)
 ament_target_dependencies(add_two_ints_serv example_interfaces rclcpp)
 
+add_executable(hardware_status_publisher src/hardware_status_publisher.cpp)
+ament_target_dependencies(hardware_status_publisher my_robot_interfaces rclcpp)
+
 install(TARGETS
   add_two_ints_client
   add_two_ints_serv
   cpp_node
+  hardware_status_publisher
   DESTINATION lib/${PROJECT_NAME}
 )
 
