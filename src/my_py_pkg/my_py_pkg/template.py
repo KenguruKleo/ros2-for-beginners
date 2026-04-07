@@ -4,7 +4,9 @@ from rclpy.node import Node
 
 class MyNode(Node):
     def __init__(self):
-        super().__init__('node_name')
+        node_name = 'node_name' #replace 'node_name' with the name of your node
+        super().__init__(node_name)
+        self.get_logger().info(f'{node_name} started!')
 
 def main(args=None):
     rclpy.init(args=args)

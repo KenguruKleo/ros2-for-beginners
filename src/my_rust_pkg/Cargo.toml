@@ -16,6 +16,18 @@ path = "src/rust_news_station.rs"
 name = "rust_news_subscriber"
 path = "src/rust_news_subscriber.rs"
 
+[[bin]]
+name = "add_two_ints_serv"
+path = "src/add_two_ints_serv.rs"
+
+[[bin]]
+name = "add_two_ints_client_no_opp"
+path = "src/add_two_ints_client_no_opp.rs"
+
+[[bin]]
+name = "add_two_ints_client"
+path = "src/add_two_ints_client.rs"
+
 [dependencies]
 anyhow = {version = "1", features = ["backtrace"]}
 rclrs = "0.7"
