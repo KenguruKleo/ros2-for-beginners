@@ -10,6 +10,10 @@ class MyNode(Node):
         super().__init__(node_name)
         self.get_logger().info(f'{node_name} started!')
 
+        self.declare_parameter('timer_period', 5.0)
+        timer_period: float = self.get_parameter(
+            'timer_period').get_parameter_value().double_value
+
         self.led_states = [0, 0, 0]
 
         # Service for setting LED state
@@ -17,7 +21,6 @@ class MyNode(Node):
 
         # Publisher for LED status
         self.led_status_publisher_ = self.create_publisher(LedStateArray, 'led_status', 10)
-        timer_period = 5.0  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
 
     def timer_callback(self):
