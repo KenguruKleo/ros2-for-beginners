@@ -23,11 +23,15 @@ ament_target_dependencies(add_two_ints_serv example_interfaces rclcpp)
 add_executable(hardware_status_publisher src/hardware_status_publisher.cpp)
 ament_target_dependencies(hardware_status_publisher my_robot_interfaces rclcpp)
 
+add_executable(led_panel src/led_panel.cpp)
+ament_target_dependencies(led_panel my_robot_interfaces rclcpp)
+
 install(TARGETS
   add_two_ints_client
   add_two_ints_serv
   cpp_node
   hardware_status_publisher
+  led_panel
   DESTINATION lib/${PROJECT_NAME}
 )
 
